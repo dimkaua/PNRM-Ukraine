@@ -31,22 +31,34 @@ function Header() {
             <nav className="header__menu">
               <ul>
                 <li>
-                  <Link to="/">Головне меню</Link>
+                  <Link to="/" style={{ textDecoration: 'none' }}>
+                    Головне меню
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/eventing">Події</Link>
+                  <Link to="/eventing" style={{ textDecoration: 'none' }}>
+                    Події
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/news">Новини</Link>
+                  <Link to="/news" style={{ textDecoration: 'none' }}>
+                    Новини
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/network">Наш нетворк</Link>
+                  <Link to="/network" style={{ textDecoration: 'none' }}>
+                    Наш нетворк
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/blog">Блог менеджерів</Link>
+                  <Link to="/blog" style={{ textDecoration: 'none' }}>
+                    Блог менеджерів
+                  </Link>
                 </li>
                 <li>
-                  <Link to="/team">Команда</Link>
+                  <Link to="/team" style={{ textDecoration: 'none' }}>
+                    Команда
+                  </Link>
                 </li>
               </ul>
             </nav>
