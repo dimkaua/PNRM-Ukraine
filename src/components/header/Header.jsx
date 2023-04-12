@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom'
-import React, { useState } from 'react'
+import React, { useEffect, useState, useRef, useCallback } from 'react'
 import MainMenu from '../../pages/main/MainMenu'
 import Eventing from '../../pages/eventing/Eventing'
 import News from '../../pages/news/News'
@@ -10,10 +10,34 @@ import './Header.scss'
 
 function Header() {
   const [isLanguagePopupOpen, setLanguagePopupOpen] = useState(false)
+  const sortRef = useRef()
 
   const toggleLanguagePopup = () => {
     setLanguagePopupOpen(!isLanguagePopupOpen)
   }
+
+  const handleOutsideClick = useCallback(
+    (e) => {
+      if (!sortRef.current.contains(e.target)) {
+        setLanguagePopupOpen(false)
+      }
+    },
+    [sortRef]
+  )
+
+  useEffect(() => {
+    const handleOutsideClick = (e) => {
+      if (!sortRef.current.contains(e.target)) {
+        setLanguagePopupOpen(false)
+      }
+    }
+
+    document.body.addEventListener('click', handleOutsideClick)
+
+    return () => {
+      document.body.removeEventListener('click', handleOutsideClick)
+    }
+  }, [handleOutsideClick, sortRef])
 
   return (
     <Router>
@@ -28,6 +52,7 @@ function Header() {
                 alt="logo"
               />
             </div>
+
             <nav className="header__menu">
               <ul>
                 <li>
@@ -62,7 +87,7 @@ function Header() {
                 </li>
               </ul>
             </nav>
-            <div className="language-switcher">
+            <div ref={sortRef} className="language-switcher">
               <button onClick={toggleLanguagePopup}>
                 <img
                   width={80}

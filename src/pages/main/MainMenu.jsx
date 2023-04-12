@@ -1,4 +1,5 @@
 import './MainMenu.scss'
+// import SliderGallery from '../../components/slider/SliderGallery'
 
 function MainMenu() {
   return (
@@ -148,9 +149,12 @@ function MainMenu() {
           </a>
         </div>
       </div>
+
       <div className="photogallery">
         <h2 className="photogallery__title">Фотогалерея</h2>
         <div className="photogallery__container">
+          {/* <SliderGallery /> */}
+
           <div className="photogallery__image">
             <img
               className="photogallery__img"
@@ -207,6 +211,7 @@ function MainMenu() {
           </div>
         </div>
       </div>
+
       <div className="donate">
         <h2 className="donate__title">Підтримати нас:</h2>
         <a href="https://send.monobank.ua/jar/pJW2wViSQ">
