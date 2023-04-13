@@ -1,5 +1,5 @@
 import './MainMenu.scss'
-// import SliderGallery from '../../components/slider/SliderGallery'
+import SliderGallery from '../../components/slider/SliderGallery'
 
 function MainMenu() {
   return (
@@ -153,62 +153,7 @@ function MainMenu() {
       <div className="photogallery">
         <h2 className="photogallery__title">Фотогалерея</h2>
         <div className="photogallery__container">
-          {/* <SliderGallery /> */}
-
-          <div className="photogallery__image">
-            <img
-              className="photogallery__img"
-              width={543}
-              height={312}
-              src="./img/photos/photo_1.png"
-              alt="#"
-            />
-          </div>
-          <div className="photogallery__image">
-            <img
-              className="photogallery__img"
-              width={640}
-              height={445}
-              src="./img/photos/photo_2.png"
-              alt="#"
-            />
-          </div>
-          <div className="photogallery__image">
-            <img
-              className="photogallery__img"
-              width={527}
-              height={414}
-              src="./img/photos/photo_3.png"
-              alt="#"
-            />
-          </div>
-          <div className="photogallery__image">
-            <img
-              className="photogallery__img"
-              width={635}
-              height={306}
-              src="./img/photos/photo_4.png"
-              alt="#"
-            />
-          </div>
-          <div className="photogallery__image">
-            <img
-              className="photogallery__img"
-              width={532}
-              height={444}
-              src="./img/photos/photo_5.png"
-              alt="#"
-            />
-          </div>
-          <div className="photogallery__image">
-            <img
-              className="photogallery__img"
-              width={638}
-              height={446}
-              src="./img/photos/photo_6.png"
-              alt="#"
-            />
-          </div>
+          <SliderGallery />
         </div>
       </div>
 

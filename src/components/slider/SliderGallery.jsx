@@ -1,32 +1,71 @@
-// import Slider from 'react-slick'
-// import './SliderGallery.scss'
-// import photo_1 from './img/photos/photo_1.png'
-// import photo_2 from './img/photos/photo_2.png'
+import React, { useState } from 'react'
+import './SliderGallery.scss'
 
-// const images = [photo_1, photo_2]
+const SliderGallery = () => {
+  const [currentIndex, setCurrentIndex] = useState(0)
+  const photos = [
+    {
+      url: './img/photos/photo_1.png',
+      alt: 'Photo 1',
+    },
+    {
+      url: './img/photos/photo_2.png',
+      alt: 'Photo 2',
+    },
+    {
+      url: './img/photos/photo_3.png',
+      alt: 'Photo 3',
+    },
+    {
+      url: './img/photos/photo_4.png',
+      alt: 'Photo 4',
+    },
+    {
+      url: './img/photos/photo_5.png',
+      alt: 'Photo 5',
+    },
+    {
+      url: './img/photos/photo_6.png',
+      alt: 'Photo 6',
+    },
+  ]
 
-// function SliderGallery() {
-//   const settings = {
-//     dots: true,
-//     infinite: true,
-//     speed: 500,
-//     slidesToShow: 1,
-//     slidesToScroll: 1,
-//     autoplay: true,
-//     autoplaySpeed: 2000,
-//   }
+  const nextSlide = () => {
+    setCurrentIndex(currentIndex === photos.length - 1 ? 0 : currentIndex + 1)
+  }
 
-//   return (
-//     <div className="slider-gallery">
-//       <Slider {...settings}>
-//         {images.map((image, index) => (
-//           <div key={index}>
-//             <img src={image} alt={`Slide ${index + 1}`} />
-//           </div>
-//         ))}
-//       </Slider>
-//     </div>
-//   )
-// }
+  const prevSlide = () => {
+    setCurrentIndex(currentIndex === 0 ? photos.length - 1 : currentIndex - 1)
+  }
 
-// export default SliderGallery
+  const openPhoto = (photoUrl) => {
+    window.open(photoUrl, '_blank', 'width=800,height=600')
+  }
+
+  return (
+    <div className="slider">
+      <div
+        className="slider-wrapper"
+        style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+      >
+        {photos.map((photo, index) => (
+          <div key={index} className="slide">
+            <img
+              src={photo.url}
+              alt={photo.alt}
+              onClick={() => openPhoto(photo.url)}
+            />
+          </div>
+        ))}
+      </div>
+      <button className="slider-prev" onClick={prevSlide}>
+        Назад
+      </button>
+      <button className="slider-next" onClick={nextSlide}>
+        Вперед
+      </button>
+    </div>
+  )
+}
+
+export default SliderGallery
