@@ -39,6 +39,21 @@ function Header() {
     }
   }, [handleOutsideClick, sortRef])
 
+  const pages = [
+    { name: 'Головне меню', path: '/' },
+    { name: 'Події', path: '/eventing' },
+    { name: 'Новини', path: '/news' },
+    { name: 'Наш нетворк', path: '/network' },
+    { name: 'Блог менеджерів', path: '/blog' },
+    { name: 'Команда', path: '/team' },
+  ]
+
+  // const [activeMenu, setActiveMenu] = useState(0)
+
+  // const onSelectMenu = (index) => {
+  //   setActiveMenu(index)
+  // }
+
   return (
     <Router>
       <header>
@@ -55,36 +70,15 @@ function Header() {
 
             <nav className="header__menu">
               <ul>
-                <li>
-                  <Link to="/" style={{ textDecoration: 'none' }}>
-                    Головне меню
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/eventing" style={{ textDecoration: 'none' }}>
-                    Події
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/news" style={{ textDecoration: 'none' }}>
-                    Новини
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/network" style={{ textDecoration: 'none' }}>
-                    Наш нетворк
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/blog" style={{ textDecoration: 'none' }}>
-                    Блог менеджерів
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/team" style={{ textDecoration: 'none' }}>
-                    Команда
-                  </Link>
-                </li>
+                {pages.map((page, index) => (
+                  <li
+                    key={index}
+                    // onClick={() => onSelectMenu(index)}
+                    // className={activeMenu === index ? 'active' : ''}
+                  >
+                    <Link to={page.path}>{page.name}</Link>
+                  </li>
+                ))}
               </ul>
             </nav>
             <div ref={sortRef} className="language-switcher">

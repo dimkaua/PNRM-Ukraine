@@ -28,9 +28,9 @@
         cursor: pointer;
       }
 
-      &.active {
-        color: #6969f8;
-      }
+      // &.active {
+      //   color: #6969f8;
+      // }
 
       a {
         color: #000000;
@@ -41,12 +41,16 @@
           color: #6969f8;
         }
 
-        &.active {
-          color: #6969f8;
-        }
+        // &.active {
+        //   color: #6969f8;
+        // }
       }
     }
   }
+}
+
+.header__menu li.active {
+  color: #6969f8;
 }
 
 .language-switcher {
