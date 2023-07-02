@@ -2,8 +2,8 @@ import './Team.scss'
 
 function Team() {
   return (
-    <div>
-      <h1>Team-Empty</h1>
+    <div className="container">
+      <h1>Засновники:</h1>
     </div>
   )
 }
