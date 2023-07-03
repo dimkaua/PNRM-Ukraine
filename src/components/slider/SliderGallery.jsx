@@ -59,10 +59,20 @@ const SliderGallery = () => {
         ))}
       </div>
       <button className="slider-prev" onClick={prevSlide}>
-        Назад
+        <img
+          width={100}
+          height={100}
+          src="./img/network/arrow_left.png"
+          alt="#"
+        />
       </button>
       <button className="slider-next" onClick={nextSlide}>
-        Вперед
+        <img
+          width={100}
+          height={100}
+          src="./img/network/arrow_right.png"
+          alt="#"
+        />
       </button>
     </div>
   )

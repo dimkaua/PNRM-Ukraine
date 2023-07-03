@@ -1,0 +1,151 @@
+// .dialog-boxes-container {
+//   margin-top: 52px;
+//   margin-bottom: 88px;
+// }
+
+// .dialog-box {
+//   background-color: #ffffff;
+//   border: 1px solid #ffff;
+//   border-radius: 30px;
+//   padding: 22px;
+//   width: 930px;
+//   margin-bottom: 30px;
+// }
+
+// .text {
+//   color: #000;
+//   font-family: 'e-Ukraine-Regular', sans-serif;
+//   font-size: 27px;
+// }
+
+// .dialog-box-1 {
+//   position: relative;
+// }
+
+// .dialog-box-1::before {
+//   content: '';
+//   position: absolute;
+//   bottom: -28px;
+//   left: 5%;
+//   transform: translateX(50%);
+//   border-width: 0 18px 3px 0px;
+//   width: 0;
+//   height: 0;
+//   border-left: 0px solid transparent;
+//   border-right: 40px solid transparent;
+//   border-top: 30px solid #ffffff;
+// }
+
+// .dialog-box-2 {
+//   position: relative;
+// }
+
+// .dialog-box-2::before {
+//   content: '';
+//   position: absolute;
+//   bottom: -28px;
+//   left: 85%;
+//   transform: translateX(50%);
+//   border-width: 0 18px 3px 0px;
+//   width: 0;
+//   height: 0;
+//   border-left: 0px solid transparent;
+//   border-right: 40px solid transparent;
+//   border-top: 30px solid #ffffff;
+// }
+
+// .dialog-box-3 {
+//   position: relative;
+// }
+
+// .dialog-box-3::before {
+//   content: '';
+//   position: absolute;
+//   bottom: -28px;
+//   left: 5%;
+//   transform: translateX(50%);
+//   border-width: 0 18px 3px 0px;
+//   width: 0;
+//   height: 0;
+//   border-left: 0px solid transparent;
+//   border-right: 40px solid transparent;
+//   border-top: 30px solid #ffffff;
+// }
+
+.dialog-boxes-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 52px;
+  margin-bottom: 88px;
+}
+
+.dialog-box {
+  background-color: #ffffff;
+  border: 1px solid #ffff;
+  border-radius: 30px;
+  padding: 22px;
+  width: 100%;
+  max-width: 950px; /* Додайте максимальну ширину для адаптивності */
+  margin-bottom: 30px;
+}
+
+.text {
+  color: #000;
+  font-family: 'e-Ukraine-Regular', sans-serif;
+  font-size: 27px;
+}
+
+.dialog-box-1 {
+  position: relative;
+}
+
+.dialog-box-1::before {
+  content: '';
+  position: absolute;
+  bottom: -28px;
+  left: 10px;
+  transform: translateX(50%);
+  border-width: 0 18px 3px 0px;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 30px solid #ffffff;
+}
+
+.dialog-box-2 {
+  position: relative;
+}
+
+.dialog-box-2::before {
+  content: '';
+  position: absolute;
+  bottom: -28px;
+  right: 55px;
+  transform: translateX(50%);
+  border-width: 0 18px 3px 0px;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 30px solid #ffffff;
+}
+
+.dialog-box-3 {
+  position: relative;
+}
+
+.dialog-box-3::before {
+  content: '';
+  position: absolute;
+  bottom: -28px;
+  left: 10px;
+  transform: translateX(50%);
+  border-width: 0 18px 3px 0px;
+  width: 0;
+  height: 0;
+  border-left: 0px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 30px solid #ffffff;
+}
